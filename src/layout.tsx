@@ -1,4 +1,4 @@
-import Header from './components/header';
+import Header from './components/header/index';
 
 type Props = {
   children: JSX.Element;

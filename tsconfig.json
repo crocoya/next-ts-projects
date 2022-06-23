@@ -17,6 +17,6 @@
     "incremental": true
   },
   "files": ["pages/index.tsx"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["src/components/types/next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
