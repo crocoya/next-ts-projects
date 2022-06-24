@@ -1,5 +1,7 @@
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
 // IMPORT FONTS
-@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap');
 
 // RESET CSS
 *,
@@ -46,3 +48,7 @@ img {
   height: auto;
   display: block;
 }
+
+`;
+
+export default GlobalStyle;

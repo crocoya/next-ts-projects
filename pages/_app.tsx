@@ -1,12 +1,16 @@
 import type { AppProps } from 'next/app';
+import { Context as ResponsiveContext } from 'react-responsive';
+import GlobalStyle from '../src/components/globalstyles';
 import Layout from '../src/layout';
-import '../styles/main.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <ResponsiveContext.Provider value={{ width: 500 }}>
+      <Layout>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </Layout>
+    </ResponsiveContext.Provider>
   );
 }
 

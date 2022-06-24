@@ -1,15 +1,21 @@
 import Header from './components/header/index';
+import styled from 'styled-components';
 
-type Props = {
-  children: JSX.Element;
-};
-
-const Layout = ({ children }: Props) => {
+const Layout = ({ children }: any) => {
   return (
-    <>
+    <NextApp>
       <Header />
-      <main className='main'>{children}</main>
-    </>
+      <Main className='main'>{children}</Main>
+    </NextApp>
   );
 };
 export default Layout;
+
+const NextApp = styled.div`
+  @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@200;300;400;500;600;700&display=swap');
+`;
+
+const Main = styled.main`
+  height: 100vh;
+  padding-top: 10vh;
+`;

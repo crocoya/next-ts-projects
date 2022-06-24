@@ -1,40 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { FiGithub } from 'react-icons/fi';
 import { useMediaQuery } from 'react-responsive';
 import { DeviceSize } from '../responsive';
-
-const HeaderItems = [
-  {
-    title: 'Home',
-    url: '/',
-  },
-  {
-    title: 'Discovery Projects',
-    url: '/',
-  },
-  {
-    title: 'Blog',
-    url: '/',
-  },
-  {
-    title: 'Contact',
-    url: '/',
-  },
-];
-
-const SocialItems = [
-  {
-    social: 'Github',
-    icon: <FiGithub />,
-    url: 'https://github.com/crocoya/next-ts-projects',
-  },
-];
+import { HeaderItems, SocialItems } from './items';
+import MenuLinks from './menu-links';
+import MenuToggle from './menu-toggle';
 
 const Header = () => {
   const isMobile = useMediaQuery({ maxWidth: DeviceSize.intermediate });
-  // const [isOpen, setOpen] = React.useState(false);
+  const [isOpen, setOpen] = React.useState(false);
 
   return (
     <>
@@ -66,12 +41,12 @@ const Header = () => {
               </ItemsFlex>
             )}
           </ItemsCenter>
-          {/* {isMobile && (
+          {isMobile && (
             <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
-          )} */}
+          )}
         </HeaderFull>
       </HeaderFixed>
-      {/* {isMobile && <MenuLinks isOpen={isOpen} />} */}
+      {isMobile && <MenuLinks isOpen={isOpen} />}
     </>
   );
 };
