@@ -36,7 +36,7 @@ const MenuLinks = ({ isOpen }: any) => {
 
 export default MenuLinks;
 
-const MenuWrapper = styled.div`
+const MenuWrapper = styled.header`
   position: fixed;
   z-index: 60;
   display: flex;
@@ -60,7 +60,7 @@ const MenuContent = styled.ul`
 const MenuItems = styled.li`
   border-bottom: 2px solid;
   border-bottom-width: 1px;
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgb(0, 0, 0);
 `;
 
 const MenuLink = styled.a`
