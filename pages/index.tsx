@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import Head from 'next/head';
 import styled from 'styled-components';
 
@@ -15,6 +16,9 @@ const Home: NextPage = () => {
         <HomeDescription>
           Here we testing Next JS with TypeScript
         </HomeDescription>
+        <Link href='/blog'>
+          <a style={{ marginTop: '50px' }}>Redirect to my blog</a>
+        </Link>
       </HomeContent>
     </>
   );
@@ -26,7 +30,6 @@ const HomeContent = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: green;
 `;
 
 const HomeTitle = styled.h2`
